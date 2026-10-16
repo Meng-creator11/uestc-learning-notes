@@ -13,25 +13,25 @@ int main(){
 		a++;
 		scanf("%d",&n);
 		if (n<ans){
-		printf("²ÂĞ¡ÁË");
+		printf("çŒœå°äº†");
 	}
 		else if(n==ans){
-			printf("²Â¶ÔÁË");
+			printf("çŒœå¯¹äº†");
 			
 		}
 		else if(n>ans) {
-			printf("²Â´óÁË"); 
+			printf("çŒœå¤§äº†"); 
     }	
 	}
 	if (n<ans){
-		printf("²ÂĞ¡ÁË");
+		printf("çŒœå°äº†");
 	}
 		else if(n==ans){
-			printf("²Â¶ÔÁË");
+			printf("çŒœå¯¹äº†");
 			
 		}
 		else if(n>ans) {
-			printf("²Â´óÁË"); 
+			printf("çŒœå¤§äº†"); 
     }	
     return 0;
 }
