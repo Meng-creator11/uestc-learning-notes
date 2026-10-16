@@ -5,7 +5,8 @@
 ## 目录
 
 - `docs/` — 课程笔记（按学期组织）
-- `c-exercises/` — C 语言练习代码
+- `c-exercises/` — C 语言练习代码（按练习编号）
+- `c-learning/` — C 语言知识点学习代码（按主题分文件夹，如 `array/`、`string/`）
 
 ## 学期规划
 
