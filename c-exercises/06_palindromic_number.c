@@ -1,19 +1,29 @@
-/*所谓"回文数"是指具有如下性质的整数：一个整数，当它的各位数字逆序排列，形成的整数与原整数相同，这样的数称为回文数。例如，素数11，373，其各位数字对换位置后仍然为11，373，因此这两个整数均为回文数。编写函数int loop(int x)，判断一个整数是否为回文数，如果x是回文数则返回1，否则返回0。编写程序loop.c，接收控制台输入的两个整数a，b。调用loop函数输出a到b之间（包括a和b）的所有回文数
-【//输入形式】
-
-控制台输入两个整数a和b（必有a<b），以空格分隔
-【输出形式
-
-输出有若干行，每行有一个a和b之间的回文数。输出各行上的数字不重复，且从小至大依次按序输出。*/
-#include <stdio.h>
-
-int loop(int x)
-{
-
-}
+/*主函数+loop函数
+主函数目的：输入两个数字，输出两个数字中间的所有回文数
+loop函数目的：判断一个数字是不是回文数
+算法：设计一个for循环
+*/
+#include<stdio.h>
+int loop(int x);
 int main()
 {
-
-    return 0;
+    int a,b;
+ scanf("%d %d",&a,&b);
+  for (int x=a;x<=b;x++){
+    if(loop(x)){
+        printf("%d\n",x);
+    }
+  } 
+  return 0;
 }
+int loop(int x){
+int original=x;
+long long reverse=0;
+while(x>0){
+    reverse=reverse*10+x%10;
+    x/=10;
+}
+return reverse==original;
+}
+
 

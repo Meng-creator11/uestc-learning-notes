@@ -58,21 +58,31 @@ void bubble_sort(int a[], int n)
  * 【2】二分查找：每次砍掉一半，但数组必须已经从小到大排好序
  * 返回下标，找不到返回 -1
  * ------------------------------------------------------------------ */
-int binary_search(int a[], int n, int key)
+int binary_search(int a[], int n)
 {
-    int low = 0, high = n - 1, mid;
+     a[] = {1, 3, 5, 7, 9, 11, 13};
+    int left = 0;
+    int right = 6;
+    int target = 11;
 
-    while (low <= high) {                 /* 注意是 <=，不是 < */
-        mid = (low + high) / 2;
-        printf("  查找区间 [%d, %d]，中间位置 %d（值 %d）\n", low, high, mid, a[mid]);
-        if (a[mid] == key)
-            return mid;
-        else if (a[mid] < key)
-            low = mid + 1;                /* 目标在右半边 */
+    while (left <= right)
+    {
+        int mid = (left + right) / 2;
+
+        if (a[mid] == target)
+        {
+            printf("找到了，下标是 %d\n", mid);
+            break;
+        }
+        else if (a[mid] < target)
+        {
+            left = mid + 1;
+        }
         else
-            high = mid - 1;               /* 目标在左半边 */
+        {
+            right = mid - 1;
+        }
     }
-    return -1;
 }
 
 /* ------------------------------------------------------------------
